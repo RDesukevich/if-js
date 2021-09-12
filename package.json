@@ -1,0 +1,25 @@
+{
+  "name": "if",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.25.1",
+    "husky": "^7.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RDesukevich/if-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RDesukevich/if-js/issues"
+  },
+  "homepage": "https://github.com/RDesukevich/if-js#readme"
+}
