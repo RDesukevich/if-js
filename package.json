@@ -10,7 +10,8 @@
     "husky": "^7.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,11 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/RDesukevich/if-js/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": ""
+    }
   },
   "homepage": "https://github.com/RDesukevich/if-js#readme"
 }
