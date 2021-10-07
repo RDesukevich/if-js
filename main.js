@@ -16,14 +16,14 @@ console.log(test);
 //test = true
 console.log(Boolean(test));
 
-let arr = [2, 3, 5, 8];
+const arr = [2, 3, 5, 8];
 let p = 1;
 for (let i = 0; i < 4; i++) {
-    p = p * arr[i];
+    p *= arr[i];
 }
 console.log(p);
 
-let arr1 = [2, 5, 8, 15, 0, 6, 20, 3];
+const arr1 = [2, 5, 8, 15, 0, 6, 20, 3];
 for (let i = 0; i < 8; i++) {
     if (arr1[i] > 5 && arr1[i] < 10) {
         console.log(arr1[i]);
