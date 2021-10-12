@@ -1,5 +1,4 @@
-let date = '1993-01-28'
-function TransformationDate() {
+function TransformationDate(date) {
     date = date.split('-')
     let date1 = date[0]
     date[0] = date[2]
@@ -7,7 +6,7 @@ function TransformationDate() {
     return date.join('.')
 }
 
-console.log(TransformationDate())
+console.log(TransformationDate('1993-01-28'))
 
 const data = [
     {
