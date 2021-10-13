@@ -203,15 +203,15 @@ function palidrome(s) {
     return s === s.split("").reverse().join("");
 }
 
-console.log(palidrome('шалаш'))
+console.log(palidrome('шалаш'));
 
-const SearchValue = prompt("Enter what you are looking for").toLowerCase().trim()
+const SearchValue = prompt("Enter what you are looking for").toLowerCase().trim();
 const res = data.filter(item =>
     Object.values(item).some(value =>
         value.toLowerCase().trim().includes(SearchValue)
     )
 )
-console.log(res)
+console.log(res);
 
 
 const AllCountry = hotels.filter(item => item.country).map(item => item.country)
