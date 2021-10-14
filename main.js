@@ -1,12 +1,12 @@
 function TransformationDate(date) {
-    date = date.split('-')
-    let date1 = date[0]
-    date[0] = date[2]
-    date[2] = date1
-    return date.join('.')
+    date = date.split('-');
+    let date1 = date[0];
+    date[0] = date[2];
+    date[2] = date1;
+    return date.join('.');
 }
 
-console.log(TransformationDate('1993-01-28'))
+console.log(TransformationDate('1993-01-28'));
 
 const data = [
     {
@@ -54,9 +54,9 @@ const data = [
 const SearchInfo = searchItem => {
     for (let i = 0; i < data.length; i++) {
         if (data[i].city === searchItem || data[i].country === searchItem || data[i].hotel === searchItem) {
-            console.log(data[i])
+            console.log(data[i]);
         }
     }
-    return data
+    return data;
 }
-console.log(SearchInfo('Germany'))
+console.log(SearchInfo('Germany'));
