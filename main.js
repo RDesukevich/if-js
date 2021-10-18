@@ -205,21 +205,25 @@ function palidrome(s) {
 
 console.log(palidrome('шалаш'));
 
-const SearchValue = prompt("Enter what you are looking for").toLowerCase().trim();
+const searchValue = prompt("Enter what you are looking for").toLowerCase().trim();
 const res = data.filter(item =>
     Object.values(item).some(value =>
-        value.toLowerCase().trim().includes(SearchValue)
+        value.toLowerCase().trim().includes(searchValue)
     )
 )
 console.log(res);
 
 
-const AllCountry = hotels.filter(item => item.country).map(item => item.country)
-for (let country of hotels) {
-    hotels.filter(item => {
-        if (country.country === item.country) {
-            //И тут должно нужно внести страну и город
-        }
-    })
-}
-console.log(AllCountry);
+const allCountry = hotels.reduce((acc, item) => {
+    const res = {... acc};
+    if (!res[item.country]) {
+        res[item.country] = [];
+    }
+
+    if (!res[item.country].includes(item.city)) {
+        res[item.country].push(item.city);
+    }
+
+    return res;
+});
+console.log(allCountry);
