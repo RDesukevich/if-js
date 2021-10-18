@@ -8,11 +8,13 @@
     "eslint": "^7.32.0",
     "eslint-plugin-react": "^7.25.1",
     "husky": "^7.0.2",
+    "jest": "^27.3.0",
     "lint-staged": "^11.1.2"
   },
   "scripts": {
+    "test": "jest",
     "prepare": "husky install",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test1": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint main.js",
     "lint:fix": "eslint main.js --fix"
   },

@@ -8,18 +8,27 @@ function sum(x) {
 console.log(sum(2)(5));
 
 const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
-let tag = document.getElementsByTagName('p');
-for (let i = 0; i < colors.length; i++) {
-    tag[i].addEventListener("click", SwitchColor());
-}
 
-function SwitchColor() {
-    let color = 0;
-    return function () {
-        this.style.color = colors[color];
-        color++;
-        if (color === colors.length) {
-            color = 0;
+const text1 = document.getElementById('text1');
+const text2 = document.getElementById('text2');
+const text3 = document.getElementById('text3');
+
+const changeTextColor = () => {
+    let i = 0;
+
+    return function (event) {
+        event.target.style.color = colors[i];
+        i++;
+        if (i >= colors.length) {
+            i = 0;
         }
     }
 }
+
+const changeColor1 = changeTextColor();
+const changeColor2 = changeTextColor();
+const changeColor3 = changeTextColor();
+
+text1.addEventListener('click', changeColor1);
+text2.addEventListener('click', changeColor2);
+text3.addEventListener('click', changeColor3);
