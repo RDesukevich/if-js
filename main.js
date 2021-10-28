@@ -42,8 +42,8 @@ class Student extends User {
     }
 }
 
-function Students(students = []) {
-    this.students = [];
+function Students(students) {
+    students = new Student();
 }
 
 const data = new Date().getFullYear();
