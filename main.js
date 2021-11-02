@@ -33,26 +33,39 @@ class User {
     }
 }
 
+
 class Student extends User {
-    constructor(firstName, lastName, fullName, admissionYear, courseName, course) {
+    constructor({firstName, lastName, fullName, admissionYear, courseName, course}) {
         super(firstName, lastName, fullName);
         this.admissionYear = admissionYear;
         this.courseName = courseName;
-        this.course = new Date().getFullYear() + ' - ' + admissionYear;
+        this.course = new Date().getFullYear() + -  + admissionYear;
     }
 }
 
-function Students(students) {
-    students = new Student();
+
+class Students {
+    constructor(studentsArray){
+        this.students = studentsArray.map(
+            (student)=>{
+                return new Student ({
+                    firstName:student.firstName,
+                    lastName: student.lastName,
+                    admissionYear: student.admissionYear,
+                    courseName: student.courseName
+                })
+            })
+    }
+
+    getInfo() {
+        this.students.sort((a, b) => a.course - b.course);
+        console.log(
+            this.students.map(
+                (item) => `${item.fullName} -  ${item.courseName}, ${item.course} курс `
+            )
+        );
+    }
 }
 
-const data = new Date().getFullYear();
-Students.prototype.getInfo = function () {
-    const allCountry = studentsData.reduce((acc, item) => {
-        return `${item.firstName} ${item.lastName} - ${item.courseName}, ${data - item.admissionYear} курс`
-    });
-    return allCountry;
-}
-studentsData.sort();
 const students = new Students(studentsData);
-console.log(students.getInfo());
+students.getInfo();
