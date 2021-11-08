@@ -50,16 +50,16 @@ const data = [
 ]
 
 
-let app = document.querySelector('.homes-guests-loves_row')
+const app = document.querySelector('.homes-guests-loves_row')
 data.reduce((acc, item) => {
-    let figure = document.createElement('figure');
-    let img = document.createElement('img');
-    let p = document.createElement('p');
-    let figcaption = document.createElement('figcaption');
+    const figure = document.createElement('figure');
+    const img = document.createElement('img');
+    const p = document.createElement('p');
+    const figcaption = document.createElement('figcaption');
     figure.className = 'homes-guests-loves__col';
     img.src = item.imageUrl;
     img.className = 'homes-guests-loves__img-wrap';
-    p.innerHTML = item.city + ',' + item.country;
+    p.innerHTML = `${item.city}, ${item.country}`;
     p.className = 'homes-guest-loves__place';
     figcaption.innerHTML = item.name;
     figcaption.className = 'homes-guest-loves__text';
