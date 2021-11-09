@@ -250,4 +250,10 @@ label {
     border: 1px solid #3077C6;
     width: 99px;
     height: 30px;
+    margin-bottom: 5px;
+}
+
+.age-selection {
+    display: flex;
+    flex-direction: column;
 }
