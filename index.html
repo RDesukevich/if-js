@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <form id="formElem">
-        <input type="text" name="firstName" value="John">
-        <input type="file" name="file" accept="image/*">
-        <input type="submit">
+    <form id="form">
+        <input id="file" class="file-input" type="file" name="file">
+        <img id="img" class="img-field">
+        <button id="submit" type="submit">Submit</button>
     </form>
 </body>
 <script src="main.js"></script>
