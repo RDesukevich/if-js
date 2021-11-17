@@ -3,20 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<form action="" method="get">
-    <input class="string" id="search" name="search" placeholder="Search" value="Hotel">
-    <input class="string" id="adults" name="adults" placeholder="Adults" value="3">
-    <input class="string" id="children" name="children" placeholder="Children" value="2">
-    <input class="string" id="rooms" name="rooms" placeholder="Rooms" value="1">
-    <input class="btn" type="submit" value="Send">
-</form>
-<div class="head" style="display: none">
-    <h2>sdkfjnsdljk</h2>
-
+<div class="top-section">
+    <header>
+        <div class="logo__col">
+            <a href="#"><img class="header__logo" src="Sprite.svg#logo" alt="logo"></a>
+        </div>
+        <nav class="link__col--first">
+            <a href="#" class="header__link">Stays</a>
+        </nav>
+        <nav class="link__col--second">
+            <a href="#" class="header__link">Attractions</a>
+        </nav>
+        <div class="icon__col--first">
+            <a href="#">
+                <img src="Sprite.svg#Night" class="header-night" alt="night">
+            </a>
+        </div>
+        <div class="icon__col--second">
+            <a href="#">
+                <img src="Sprite.svg#AccountCircle" class="header-account-circle" alt="account circle">
+            </a>
+        </div>
+        <div class="icon__col-burger">
+            <img class="burger" src="images/menu.svg" alt="burger">
+        </div>
+    </header>
+    <section class="section__box">
+        <h1 class="top-section__slogan">
+            Discover stays<br>
+            to live, work or just relax
+        </h1>
+        <label class="label--place">Your destination or hotel name</label>
+        <label class="label--date--first">Check-in &#8212; Check-out</label>
+        <article class="container--form">
+            <form class="form" action="/" method="get">
+                <div class="row--form">
+                    <div class="input--place--wrap">
+                        <input type="text" id="search" name="search" class="col--place" placeholder="New York"/>
+                    </div>
+                    <div class="input--date--wrap">
+                        <input type="date" class="col--date"/>
+                    </div>
+                    <input type="text" name="guests" id="form-info" class="col--guests" value=""/>
+                    <input type="button" id="buttonSearch" class="col--button-search buttonSearch button__text" value="Search">
+                </div>
+            </form>
+            <div id="form-filter" class="form-filter">
+                <form class="filter">
+                    <div class="option-filter">
+                        <p class="text-filter">Adults</p>
+                        <button type="button" class="btn-subtract-adults btn-filter btn-adults">-</button>
+                        <p class="count-adults text-filter">0</p>
+                        <button type="button" class="btn-augment-adults btn-filter">+</button>
+                    </div>
+                    <div class="option-filter">
+                        <p class="text-filter">Children</p>
+                        <button type="button" class="btn-subtract-children btn-filter">-</button>
+                        <p class="count-children text-filter">0</p>
+                        <button type="button" class="btn-augment-children btn-filter">+</button>
+                    </div>
+                    <div class="option-filter">
+                        <p class="text-filter">Rooms</p>
+                        <button type="button" class="btn-subtract-room btn-filter btn-rooms">-</button>
+                        <p class="count-rooms text-filter">0</p>
+                        <button type="button" class="btn-augment-room btn-filter">+</button>
+                    </div>
+                </form>
+            </div>
+        </article>
+        <div class="head-store-badges">
+            <a href="#"><img src="apps-compress.svg" alt="badges app store and google play"></a>
+        </div>
+    </section>
 </div>
-<button class="btn1">sjdfojasd</button>
+<section class="available-hotels" style="display: none">
+    <div class="container--available-hotels available-hotels-slider">
+        <h2 class="heading--available-hotels">Available hotels</h2>
+
+    </div>
+</section>
 </body>
 <script src="main.js"></script>
 </html>
