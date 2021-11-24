@@ -106,6 +106,84 @@ document.querySelector('.btn-subtract-room').addEventListener('click', function 
     }
     btn.setAttribute('disable', 'false')
 })
+
+const form = document.getElementById("form");
+const img = document.getElementById("img");
+const file = document.getElementById("file");
+
+
+file.addEventListener("change", (event) => {
+    event.preventDefault();
+    const files = file.files;
+    const reader = new FileReader();
+    reader.readAsDataURL(files[0]);
+    reader.onload = () => {
+        const imgUrl = reader.result;
+        img.style.backgroundImage = `url("${imgUrl}")`;
+        img.innerHTML = "";
+    };
+});
+
+async function fileUpload(event) {
+    event.preventDefault();
+    const response = await fetch(
+        "https://fe-student-api.herokuapp.com/api/file",
+        {
+            method: "POST",
+            body: new FormData(form),
+        }
+    );
+    const result = await response.json();
+    if (response.ok) {
+        console.log(result);
+    } else console.log(result.message);
+}
+
+form.onsubmit = fileUpload;
+if (sessionStorage.getItem('hotels')) {
+    JSON.parse(sessionStorage.getItem('hotels')).forEach((item => {
+        const img = document.createElement('img');
+        img.src = item.imageUrl;
+        document.body.append(img);
+    }))
+}
+else {
+    fetch("https://fe-student-api.herokuapp.com/api/hotels/popular").then(
+        (response) =>
+            response.json().then((json) => {
+                json.forEach((item => {
+                    const img = document.createElement('img');
+                    img.src = item.imageUrl;
+                    document.body.append(img);
+                }))
+                sessionStorage.setItem('hotels', JSON.stringify(json));
+            })
+    );
+}
+
+let app = document.querySelector('.homes-guests-loves_row');
+fetch("https://fe-student-api.herokuapp.com/api/hotels/popular").then(
+    (response) =>
+        response.json().then((json) => {
+            json.forEach((item) => {
+                let figure = document.createElement('figure');
+                let img = document.createElement('img');
+                let p = document.createElement('p');
+                let figcaption = document.createElement('figcaption');
+                figure.className = 'homes-guests-loves__col';
+                img.src = item.imageUrl;
+                img.className = 'homes-guests-loves__img-wrap';
+                p.innerHTML = item.city + ', ' + item.country;
+                p.className = 'homes-guest-loves__place';
+                figcaption.innerHTML = item.name;
+                figcaption.className = 'homes-guest-loves__text';
+                app.appendChild(figure);
+                figure.append(img);
+                figure.append(figcaption);
+                figure.append(p);
+            })
+        })
+);
 const data = [
     {
         name: 'Hotel Leopold',
@@ -377,6 +455,7 @@ document.querySelector('.homes-guests-loves__slider').addEventListener('click', 
         offset = 0;
     }
     sliderLine.style.left = -offset + 'px';
+});
 });
     },
     {

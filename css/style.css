@@ -77,6 +77,11 @@ body {
     font-weight: 400;
 }
 
+.homes-guests-loves__img-wrap {
+    width: 295px;
+    height: 295px;
+}
+
 .homes-guests-loves__slider {
     position: relative;
     width: 40px;
