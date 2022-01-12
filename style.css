@@ -1,3 +1,448 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* Block: top-section */
+
+.top-section {
+    background-image: url("castelmezzano.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100%;
+    color: #FFFFFF;
+}
+
+
+header {
+    max-width: 1232px;
+    padding: 51px 16px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header__link {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.header-night {
+    width: 30px;
+    height: 30px;
+    margin-right: 24px;
+}
+
+.header-account-circle {
+    width: 40px;
+    height: 40px;
+}
+
+.logo__col {
+    width: 72%;
+}
+
+.header__logo {
+    width: 205px;
+    height: 40px;
+}
+
+.link__col--first {
+    width: 7%;
+}
+
+.link__col--second {
+    width: 13%;
+}
+
+.header__link {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.header-night {
+    width: 30px;
+    height: 40px;
+}
+
+.header-account-circle {
+    width: 40px;
+    height: 40px;
+}
+
+.icon__col-burger {
+    display: none;
+}
+
+.section__box {
+    width: 1232px;
+    padding: 196px 16px 120px;
+    margin: 0 auto;
+}
+
+.top-section__slogan {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 59px;
+    margin-bottom: 100px;
+}
+
+.container--form {
+    max-width: 1232px;
+    height: 64px;
+    background: #FFFFFF;
+    border: 3px solid #f3f3f4;
+    border-radius: 8px;
+    margin-bottom: 120px;
+    margin-top: 24px;
+}
+
+.row--form {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.input--place--wrap {
+    width: 36%;
+}
+
+input {
+    font-weight: 400;
+    height: 57px;
+    border: none;
+    border-radius: 8px;
+    padding-left: 24px;
+    font-size: 18px;
+}
+
+.col--place {
+    width: 100%;
+}
+
+.input--date--wrap {
+    width: 22%;
+    border: 3px solid #F5BD41;
+    border-radius: 8px;
+    margin-top: -3px;
+    margin-bottom: 3px;
+}
+
+.col--date {
+    width: 100%;
+}
+
+.col--guests {
+    width: 27%;
+}
+
+button {
+    cursor: pointer;
+}
+
+.col--button-search {
+    width: 16.6%;
+    height: 64px;
+    background: #3077C6;
+    border-radius: 8px;
+    border: none;
+    margin-block-start: -3px;
+    margin-inline-end: -3px;
+}
+
+.button__text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+label {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 24px;
+    margin-left: 24px;
+}
+
+.label--date--first {
+    margin-left: 197px;
+}
+
+.head-store-badges {
+    display: flex;
+    justify-content: center;
+}
+
+.age-selection {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Block: what-do-we-offer */
+
+.what-do-we-offer {
+    background-color: #FFFFFF;
+    color: #383838;
+}
+
+.container--what-do-we-offer {
+    padding: 120px 0 114px 0;
+    max-width: 1232px;
+    margin: 0 auto;
+}
+
+.heading--what-do-we-offer {
+    margin-bottom: 104px;
+    font-size: 40px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.what-do-we-offer_row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.what-do-we-offer__col {
+    width: 25%;
+    text-align: center;
+}
+
+.what-do-we-offer__text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.img--support {
+    width: 75px;
+    height: 92px;
+    margin-bottom: 52px;
+}
+
+.img--communicate {
+    width: 83px;
+    height: 83px;
+    margin-bottom: 56px;
+}
+
+.img--book {
+    width: 100px;
+    height: 67px;
+    margin-bottom: 74px;
+}
+
+.img--reviews {
+    width: 92px;
+    height: 83px;
+    margin-bottom: 55px;
+}
+
+/* Block: homes-guests-loves */
+
+.homes-guests-loves {
+    background-color: #EAF0F9;
+    color: #383838;
+}
+
+.container--homes-guests-loves {
+    padding: 120px 0;
+    width: 1244px;
+    overflow: hidden;
+    margin: 30px auto;
+}
+
+.heading--homes-guests-loves {
+    margin-bottom: 105px;
+    font-size: 40px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.homes-guests-loves_row {
+    width: 295px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+
+.homes-guest-loves__text {
+    font-size: 24px;
+    color: #3077C6;
+    font-weight: 400;
+    margin: 24px 0;
+}
+
+.homes-guest-loves__place {
+    font-size: 24px;
+    color: #BFBFBF;
+    font-weight: 400;
+}
+
+.homes-guests-loves__slider {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: -301px;
+    left: 97%;
+}
+
+.homes-guests-loves__col {
+    padding-right: 16px;
+}
+
+.homes-guests-loves__img-wrap {
+    width: 295px;
+    height: 295px;
+}
+
+.container--img-hostel-friendship{
+    position: relative;
+}
+
+/* Block: Available hotels*/
+
+.available-hotels_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.available-hotels__col {
+    padding-right: 16px;
+    width: 25%;
+    height: 25%;
+}
+
+.available-hotels__img-wrap {
+    width: 295px;
+    height: 295px;
+    margin: 24px 0;
+}
+
+.available-hotels__place {
+    font-size: 24px;
+    color: #BFBFBF;
+    font-weight: 400;
+    margin-top: 24px;
+}
+
+.available-hotels__text {
+    font-size: 24px;
+    color: #3077C6;
+    font-weight: 400;
+    margin: 24px 0;
+}
+
+.heading--available-hotels {
+    margin-bottom: 105px;
+    font-size: 40px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.available-hotels {
+    background-color: #EAF0F9;
+    color: #383838;
+}
+
+.container--available-hotels {
+    padding: 120px 0;
+    width: 1244px;
+    overflow: hidden;
+    margin: 30px auto;
+}
+
+.filter {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 22px 22px 22px 18px;
+    width: 259px;
+}
+
+.form-filter {
+    justify-content: end;
+    margin-right: 180px;
+    display: none;
+}
+
+.btn-filter {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #3077C6;
+    color: #3077C6;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.text-filter {
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+}
+
+.option-filter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.btn-adults {
+    margin-left: 13px;
+}
+
+.btn-rooms {
+    margin-left: 9px;
+}
+
+.filter-subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000;
+    margin-top: 16px;
+    margin-bottom: 12px;
+}
+
+.children-years-old {
+    background: #FFFFFF;
+    border: 1px solid #3077C6;
+    width: 99px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.age-selection {
+
 .img-field {
     width: 400px;
     height: 200px;
