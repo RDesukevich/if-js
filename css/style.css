@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto-medium.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/roboto-regular.woff2") format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("../fonts/open-sans-semibold.woff2") format('woff2');
+    font-style: normal;
+    font-weight: 600;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* Block: homes-guests-loves */
+
+.homes-guests-loves {
+    background-color: #EAF0F9;
+    color: #383838;
+}
+
+.container--homes-guests-loves {
+    width: 1244px;
+    overflow: hidden;
+    margin: 30px auto;
+}
+
+.heading--homes-guests-loves {
+    margin-bottom: 105px;
+    font-size: 40px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.homes-guests-loves_row {
+    width: 295px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+
+.homes-guest-loves__text {
+    font-size: 24px;
+    color: #3077C6;
+    font-weight: 400;
+    margin: 24px 0;
+}
+
+.homes-guest-loves__place {
+    font-size: 24px;
+    color: #BFBFBF;
+    font-weight: 400;
+}
+
+.homes-guests-loves__img-wrap {
+    width: 295px;
+    height: 295px;
+}
+
+.homes-guests-loves__slider {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    left: 97%;
+    top: -301px;
+}
+
+.homes-guests-loves__col {
+    padding-right: 16px;
+}
+
+@media (min-width: 900px) {
+    h2:hover:before {
+        transform: scale(1);
+    }
+    h2:before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 4px;
+        background: #F5BD41;
+        top: 150%;
+        transform: scale(0);
+        transition: 0.5s;
+        transform-origin: left;
+    }
+}
