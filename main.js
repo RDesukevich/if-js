@@ -1,16 +1,25 @@
+
+const filter = document.querySelector('.filter');
+const div = document.createElement('div');
+const p = document.createElement('p');
+
+let countAdults = document.querySelector('.count-adults');
+let countChildren = document.querySelector('.count-children');
+let countRoom = document.querySelector('.count-rooms');
+
 let filter = document.querySelector('.filter');
 let div = document.createElement('div');
 let p = document.createElement('p');
 let select = document.createElement('select');
+
 
 div.className = 'age-selection';
 div.id = 'age-selection';
 filter.append(div);
 p.className = 'filter-subtitle'
 p.innerHTML = 'What is the age of the child you’re travelling with?';
+
 select.className = 'children-years-old';
-
-
 
 document.querySelector('.col--guests').addEventListener('click', function (){
     document.getElementById("form-filter").style.display = 'flex';
@@ -23,11 +32,13 @@ let countAdults = document.querySelector('.count-adults');
 let countChildren = document.querySelector('.count-children');
 let countRoom = document.querySelector('.count-rooms');
 
+
 document.querySelector('.btn-augment-adults').addEventListener('click', function () {
     let btn = document.querySelector('.btn-augment-adults');
     if (countAdults.innerHTML < 30) {
         adults++
         countAdults.innerHTML = adults.toString();
+        document.querySelector('.col--guests').value = adults + ' Adults ' + children + ' Children ' + room + ' Room';
         document.querySelector('.col--guests').value = `${adults} Adults ${children} Children ${room} Rooms`;
     } else {
         btn.setAttribute('disable','disable');
@@ -40,6 +51,7 @@ document.querySelector('.btn-subtract-adults').addEventListener('click', functio
     if (countAdults.innerHTML > 0) {
         adults--
         countAdults.innerHTML = adults.toString();
+        document.querySelector('.col--guests').value = adults + ' Adults ' + children + ' Children ' + room + ' Room';
         document.querySelector('.col--guests').value = `${adults} Adults ${children} Children ${room} Rooms`;
     } else {
         btn.setAttribute('disable','disable');
@@ -52,6 +64,12 @@ document.querySelector('.btn-augment-children').addEventListener('click', functi
     if (countChildren.innerHTML < 10) {
         children++
         countChildren.innerHTML = children.toString();
+        document.querySelector('.col--guests').value = adults + ' Adults ' + children + ' Children ' + room + ' Room';
+        const select = document.createElement('select');
+        select.className = 'children-years-old';
+        for (let i = 1; i < 18; i++) {
+            let option = document.createElement('option');
+            option.innerHTML = i + ' years old'
         document.querySelector('.col--guests').value = `${adults} Adults ${children} Children ${room} Rooms`;
         const select = document.createElement('select');
         select.id = 'select-filter';
@@ -74,6 +92,7 @@ document.querySelector('.btn-subtract-children').addEventListener('click', funct
     if (countChildren.innerHTML > 0) {
         children--
         countChildren.innerHTML = children.toString();
+        document.querySelector('.col--guests').value = adults + ' Adults ' + children + ' Children ' + room + ' Room';
         document.querySelector('.col--guests').value = `${adults} Adults ${children} Children ${room} Rooms`;
         const select = document.querySelector('.children-years-old');
         div.removeChild(select)
@@ -91,6 +110,7 @@ document.querySelector('.btn-augment-room').addEventListener('click', function (
     if (countRoom.innerHTML < 30) {
         room++
         countRoom.innerHTML = room.toString();
+        document.querySelector('.col--guests').value = adults + ' Adults ' + children + ' Children ' + room + ' Room';
         document.querySelector('.col--guests').value = `${adults} Adults ${children} Children ${room} Rooms`;
     } else {
         btn.setAttribute('disable','disable');
@@ -103,6 +123,7 @@ document.querySelector('.btn-subtract-room').addEventListener('click', function 
     if (countRoom.innerHTML > 0) {
         room--;
         countRoom.innerHTML = room.toString();
+        document.querySelector('.col--guests').value = adults + ' Adults ' + children + ' Children ' + room + ' Room';
         document.querySelector('.col--guests').value = `${adults} Adults ${children} Children ${room} Rooms`;
     } else {
         btn.setAttribute('disable','disable');
@@ -205,6 +226,7 @@ const changeStyle = (id) => (event) => {
 const pBlock = [element1, element2, element3];
 for (let i = 0; i < pBlock.length; i++) {
     pBlock[i].addEventListener("click", changeStyle(Object.assign({}, colors)));
+
 const form = document.getElementById("form");
 const img = document.getElementById("img");
 const file = document.getElementById("file");

@@ -39,6 +39,16 @@
         <label class="label--place">Your destination or hotel name</label>
         <label class="label--date--first">Check-in &#8212; Check-out</label>
         <article class="container--form">
+            <form class="form" action="/" method="post">
+                <div class="row--form">
+                    <div class="input--place--wrap">
+                        <input type="text" name="place" class="col--place" placeholder="New York" required/>
+                    </div>
+                    <div class="input--date--wrap">
+                        <input type="date" class="col--date" required/>
+                    </div>
+                    <input type="text" name="guests" id="form-info" class="col--guests" value="" required/>
+                    <button class="col--button-search button__text">Search</button>
             <form class="form" action="/" method="get">
                 <div class="row--form">
                     <div class="input--place--wrap">
@@ -63,6 +73,7 @@
                         <p class="text-filter">Children</p>
                         <button type="button" class="btn-subtract-children btn-filter">-</button>
                         <p class="count-children text-filter">0</p>
+                        <button type="button" class="btn-augment-children btn-filter"Ц>+</button>
                         <button type="button" class="btn-augment-children btn-filter">+</button>
                     </div>
                     <div class="option-filter">
@@ -75,6 +86,10 @@
             </div>
         </article>
         <div class="head-store-badges">
+            <a href="#"><img src="images/apps-compress.svg" alt="badges app store and google play"></a>
+        </div>
+    </section>
+</div>
             <a href="#"><img src="apps-compress.svg" alt="badges app store and google play"></a>
         </div>
     </section>

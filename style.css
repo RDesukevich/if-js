@@ -15,6 +15,7 @@ body {
 /* Block: top-section */
 
 .top-section {
+    background-image: url("../if-js/images/castelmezzano.svg");
     background-image: url("castelmezzano.svg");
     background-position: top center;
     background-repeat: no-repeat;
@@ -442,6 +443,9 @@ label {
 }
 
 .age-selection {
+    display: flex;
+    flex-direction: column;
+}
 
 .img-field {
     width: 400px;
@@ -450,4 +454,3 @@ label {
     background-size: cover;
     background-position: center;
 }
-
