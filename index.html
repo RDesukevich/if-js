@@ -49,6 +49,16 @@
                     </div>
                     <input type="text" name="guests" id="form-info" class="col--guests" value="" required/>
                     <button class="col--button-search button__text">Search</button>
+            <form class="form" action="/" method="get">
+                <div class="row--form">
+                    <div class="input--place--wrap">
+                        <input type="text" id="search" name="search" class="col--place" placeholder="New York"/>
+                    </div>
+                    <div class="input--date--wrap">
+                        <input type="date" class="col--date"/>
+                    </div>
+                    <input type="text" name="guests" id="form-info" class="col--guests" value=""/>
+                    <input type="button" id="buttonSearch" class="col--button-search buttonSearch button__text" value="Search">
                 </div>
             </form>
             <div id="form-filter" class="form-filter">
@@ -64,6 +74,7 @@
                         <button type="button" class="btn-subtract-children btn-filter">-</button>
                         <p class="count-children text-filter">0</p>
                         <button type="button" class="btn-augment-children btn-filter"Ц>+</button>
+                        <button type="button" class="btn-augment-children btn-filter">+</button>
                     </div>
                     <div class="option-filter">
                         <p class="text-filter">Rooms</p>
@@ -79,6 +90,13 @@
         </div>
     </section>
 </div>
+            <a href="#"><img src="apps-compress.svg" alt="badges app store and google play"></a>
+        </div>
+    </section>
+</div>
+<section class="available-hotels" style="display: none">
+    <div class="container--available-hotels available-hotels-slider">
+        <h2 class="heading--available-hotels">Available hotels</h2>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
